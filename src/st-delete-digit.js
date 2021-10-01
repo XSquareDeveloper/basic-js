@@ -1,4 +1,6 @@
-import { NotImplementedError } from '../extensions/index.js';
+import {
+  NotImplementedError
+} from '../extensions/index.js';
 
 /**
  * Given some integer, find the maximal number you can obtain
@@ -11,7 +13,14 @@ import { NotImplementedError } from '../extensions/index.js';
  * For n = 152, the output should be 52
  *
  */
-export default function deleteDigit(/* n */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+export default function deleteDigit(n) {
+  n = String(n).split('');
+  let arr = [];
+  for (let i = 0; i < n.length; i++) {
+    let j = n.slice(0);
+    j.splice(i, 1);
+    j = j.join('');
+    arr.push(+j);
+  }
+  return Math.max(...arr);
 }
