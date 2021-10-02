@@ -16,7 +16,6 @@ import {
 export default function getCommonCharacterCount(s1, s2) {
   let array1 = s1.split('');
   let array2 = s2.split('');
-
   let result = 0;
 
   for (let i = 0; i < array1.length; i++) {
